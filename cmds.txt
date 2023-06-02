@@ -11,6 +11,8 @@ npm install typescript --save-dev
 npm install -g typescript
 cat > index.ts
 cat > app.ts
+cat > .env
+cat > .\config\db.config.ts
 npm install --save-dev ts-node nodemon
 cat > nodemon.json  // add config options to file
 npm run start:dev  // add script to package.json and use to run nodemon
@@ -23,4 +25,14 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned //set script execution policy 
 tsc index.ts --esModuleInterop  // transpiles typescript to javascript
 
 node index.js
+
+
+
+
+git clone https://github.com/timothyJLee/MERN-blog-portfolio-CV.git
+git add .
+git commit -m ""
+git push --force
+git pull
+git status
 

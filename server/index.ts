@@ -1,17 +1,20 @@
+import * as http from "http";
 import App from "./app";
+//import { APILogger } from "./logger/api.logger";
+require("dotenv").config();
 
-// Load HTTP module
-const http = require("http");
-const port = 3070;
+const port = process.env.PORT || 3070;
 
 App.set("port", port);
 const server = http.createServer(App);
 server.listen(port);
 
+//const logger = new APILogger();
+
 server.on("listening", function (): void {
-  let addr = server.address();
-  let bind = typeof addr === "string" ? `pipe ${addr}` : `port ${addr.port}`;
-  console.log(`Listening on ${bind}`);
+  const addr = server.address();
+  const bind = typeof addr === "string" ? `pipe ${addr}` : `port ${addr!.port}`;
+ // logger.info(`Listening on ${bind}`, null);
 });
 
 module.exports = App;
