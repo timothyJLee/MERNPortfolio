@@ -4,10 +4,10 @@ require("dotenv").config();
 let database: Mongoose.Connection;
 
 export const connect = () => {
-  const url = process.env.MONGO_CONNECTION_STRING;
+  const url = process.env.ATLAS_URI;
   console.log(
     "from connect: process.env.MONGO_CONNECTION_STRING :::",
-    process.env.MONGO_CONNECTION_STRING
+    process.env.ATLAS_URI
   );
 
   if (database) {
