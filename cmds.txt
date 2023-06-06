@@ -9,6 +9,8 @@ npm install express --save
 npm install @types/express --save
 npm install typescript --save-dev
 npm install -g typescript
+npm install pino --save-dev
+npm install pino-pretty --save-dev  // node pino_demo.js | npx pino-pretty
 cat > index.ts
 cat > app.ts
 cat > .env
