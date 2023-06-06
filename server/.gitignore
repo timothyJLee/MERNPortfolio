@@ -102,3 +102,7 @@ dist
 
 # TernJS port file
 .tern-port
+
+# Transpiled JS files
+index.ts
+app.ts
