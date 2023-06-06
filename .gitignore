@@ -104,4 +104,4 @@ dist
 .tern-port
 
 # commands file
-/cmds.txt
+.cmds.txt
