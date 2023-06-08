@@ -5,14 +5,14 @@
   "main": "index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "buildrm": "rimraf ./build && tsc",
-    "start": "npm run build && node build/index.js",
+    "clean": "rimraf ./dist && tsc",
+    "start": "npm run build && node /index.js",
     "type": "module",
     "tslint": "tslint --project tsconfig.json --config tslint.json",
     "tslint-fix": "tslint --project tsconfig.json --config tslint.json --fix",
     "build": "webpack",
     "prod": "node dist/api.bundle.js",
-    "start:dev": "npx nodemon"
+    "start:dev": "npx nodemon && node index.js"
   },
   "keywords": [],
   "author": "",
