@@ -1,5 +1,5 @@
 import express from "express";
-//import express = require("express");
+// import express = require("express");
 import bodyParser from "body-parser";
 
 class App {
