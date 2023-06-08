@@ -12,6 +12,9 @@
     "build": "webpack",
     "prod": "node dist/api.bundle.js",
     "test": "jest",
+    "lint": "eslint src",
+    "format": "npx prettier --write src",
+    "format:check": "npx prettier --check src",
     "start:dev": "npx nodemon && node index.js"
   },
   "keywords": [],
