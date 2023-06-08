@@ -6,7 +6,7 @@ require("dotenv").config();
 const port = process.env.PORT || 3070;
 
 App.set("port", port);
-const server = http.createServer(App);
+export const server = http.createServer(App);
 server.listen(port);
 
 // const logger = new APILogger();
