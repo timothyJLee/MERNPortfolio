@@ -5,20 +5,14 @@ let database: Mongoose.Connection;
 
 export const connect = () => {
   const url = process.env.ATLAS_URI;
-  console.log(
-    "from connect: process.env.MONGO_CONNECTION_STRING :::",
-    process.env.ATLAS_URI
-  );
-
+  console.log("from connect: process.env.ATLAS_URI  :::", process.env.ATLAS_URI);
   if (database) {
     return;
   }
 
   Mongoose.connect(url!, {
     useNewUrlParser: true,
-    useFindAndModify: true,
-    useUnifiedTopology: true,
-    useCreateIndex: true,
+    useUnifiedTopology: true
   } as ConnectOptions);
 
   database = Mongoose.connection;

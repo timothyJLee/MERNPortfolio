@@ -45,15 +45,13 @@ require("dotenv").config();
 var database;
 var connect = function () {
     var url = process.env.ATLAS_URI;
-    console.log("from connect: process.env.MONGO_CONNECTION_STRING :::", process.env.ATLAS_URI);
+    console.log("from connect: process.env.ATLAS_URI  :::", process.env.ATLAS_URI);
     if (database) {
         return;
     }
     mongoose_1.default.connect(url, {
         useNewUrlParser: true,
-        useFindAndModify: true,
-        useUnifiedTopology: true,
-        useCreateIndex: true,
+        useUnifiedTopology: true
     });
     database = mongoose_1.default.connection;
     database.once("open", function () { return __awaiter(void 0, void 0, void 0, function () {

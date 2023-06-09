@@ -53,11 +53,11 @@ class App {
     });
 
     // swagger docs
-    this.express.use(
-      "/api/docs"
+    //this.express.use(
+      //"/api/docs"
       // swaggerUi.serve,
       // swaggerUi.setup(this.swaggerDocument, null, null, this.customCss)
-    );
+    //);
 
     // handle undefined routes
     this.express.use("*", (req, res, next) => {
